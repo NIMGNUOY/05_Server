@@ -146,6 +146,33 @@
 	
 	<a href="loop">JSTL 을 이용한 반복문</a>
 	<%-- /jstl/loop 라는 요청을 처리할 Controller 가 필요함 : JSTLLoopController --%>
+	
+	<hr><hr><hr>
+	
+	<%-- 현재 경로 : localhost:8080/jstl/main
+		 목표 경로 : localhost:8080/jstl/student/selectAll
+	 --%>
+	<a href="student/selectAll">workbook 에서 학생 전체 조회하기</a>
+	<%-- student/selectAll 라는 요청을 처리할 Controller : SelectAllController --%>
+	
+	<br>
+	
+	<%-- 현재 경로 : localhost:8080/jstl/main
+		 목표 경로 : localhost:8080/jstl/student/selectArch
+	 --%>
+	<a href="student/selectArch">workbook 에서 건축공학과인 학생 찾기</a>
+	<%-- SelectArchController --%>
+	
+	<br>
+	
+	<%-- 현재 경로 : localhost:8080/jstl/main
+		 목표 경로 : localhost:8080/jstl/student/selectOne
+	 --%>
+	<form action="student/selectOne" method="post">
+		학과 조회 : <input type="text" name="deptName">
+		<button>찾기</button>
+	</form>
+	<%-- 작성한 학과의 학생만 조회 SelectOneController --%>
 
 </body>
 </html>

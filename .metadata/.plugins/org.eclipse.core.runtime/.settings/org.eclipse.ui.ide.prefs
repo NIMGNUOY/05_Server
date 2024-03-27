@@ -1,6 +1,10 @@
 IMPORT_FILES_AND_FOLDERS_RELATIVE=true
 IMPORT_FILES_AND_FOLDERS_TYPE=23,1
 eclipse.preferences.version=1
+<<<<<<< HEAD
 platformState=1706872631493
+=======
+platformState=1706751364331
+>>>>>>> cd6708f6f8b4270ca6ff000327fe4a40444e166b
 quickStart=false
 tipsAndTricks=true

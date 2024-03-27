@@ -33,6 +33,8 @@
 					</div>
 					
 					<button>로그인</button>
+					
+					<a href="/signup" class="signup">회원가입</a>
 				</form>
 				
 			</c:when>
@@ -57,8 +59,13 @@
 									<td>${todo.todoTitle}</td>
 									<td>(${todo.todoMemo})</td>
 									<td>${todo.todoDate}</td>
-									<td><a class="update-btn">수정</a></td>
-									<td><a class="delete-btn">삭제</a></td>
+													<%-- query String --%>
+									<td><a href="/update?todoNo=${todo.todoNo}"
+										onclick="return confirm('${todo.todoTitle} 을 수정하시겠습니까?')" 
+										class="update-btn">수정</a></td>
+									<td><a href="/delete?todoNo=${todo.todoNo}" 
+										onclick="return confirm('정말 삭제하시겠습니까?')"
+										class="delete-btn">삭제</a></td>
 								</tr>
 							</c:forEach>
 						</table>
@@ -68,7 +75,7 @@
 				</c:choose>
 				
 				<div class="button-div">
-					<a class="insert-btn">등록하기</a>
+					<a href="/insert" class="insert-btn">등록하기</a>
 					<a href="/logout" class="logout-btn">로그아웃</a>
 				</div>
 				

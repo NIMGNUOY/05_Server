@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
+<properties>
+
+	<entry key="login">
+		SELECT AGENT_NO, AGENT_NAME, AGENT_EMAIL, AGENT_NATIONALITY, AGENT_ID
+		FROM AGENT
+		WHERE AGENT_ID = ?
+		AND AGENT_PW = ?
+	</entry>
+	
+	<entry key="selectAll">
+		SELECT PLAYER_NAME, PLAYER_AGE, PLAYER_TEAM, PLAYER_BACKNUM, PLAYER_NATIONALITY, 
+		NVL(PLAYER_MEMO, '특이사항 없음') AS PLAYER_MEMO, MEDICAL_CHECK, AGENT_NO
+		FROM AGENT
+		NATURAL JOIN PLAYER
+		WHERE PLAYER_DEL_FL = 'N'
+		AND AGENT_NO = ?
+	</entry>
+	
+	<entry key="signUp">
+		INSERT INTO AGENT 
+		VALUES (SEQ_AGENT.NEXTVAL, ?, ?, DEFAULT, DEFAULT, ?, ?)
+	</entry>
+	
+	<entry key="insert">
+		INSERT INTO PLAYER
+		VALUES (SEQ_PLAYER_NO.NEXTVAL, ?, ?, ?, DEFAULT, ?, DEFAULT, DEFAULT, ?, DEFAULT)
+	</entry>
+	
+	<entry key="delete">
+		UPDATE PLAYER SET PLAYER_DEL_FL = 'Y'
+		WHERE PLAYER_NO = ?
+	</entry>
+	
+</properties>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

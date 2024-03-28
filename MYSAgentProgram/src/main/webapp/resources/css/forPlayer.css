@@ -1,0 +1,14 @@
+body {
+
+    background-color: rgb(100, 100, 100);
+}
+
+* {
+    color: white;
+}
+
+main {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+}

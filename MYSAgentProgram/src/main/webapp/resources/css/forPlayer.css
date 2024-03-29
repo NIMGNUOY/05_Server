@@ -1,0 +1,24 @@
+body {
+
+    background-color: #27187e;
+}
+
+* {
+    color: white;
+}
+
+main {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+.subtitle {
+    border-bottom: 1px solid white;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.title {
+    border-bottom: 1px solid white;
+}

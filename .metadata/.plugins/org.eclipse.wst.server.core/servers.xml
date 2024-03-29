@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <servers>
+<<<<<<< HEAD
   <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/MyServer-config" deployDir="wtpwebapps" hostname="localhost" id="MyServer" name="MyServer" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+=======
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/Servlet Server-config" deployDir="wtpwebapps" hostname="localhost" id="Servlet Server" name="Servlet Server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="6">
+    <list key="modules" value0="JSPProject1::org.eclipse.jst.jee.server:JSPProject1::jst.web::6.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/JSP2 server-config" deployDir="wtpwebapps" hostname="localhost" id="JSP2 server" name="JSP2 server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="2">
+    <list key="modules" value0="JSPProject2::org.eclipse.jst.jee.server:JSPProject2::jst.web::6.0" value1="TodoList::org.eclipse.jst.jee.server:TodoList::jst.web::6.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/todoList-server-config" deployDir="wtpwebapps" hostname="localhost" id="todoList-server" name="todoList-server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="1">
+    <list key="modules" value0="TodoList::org.eclipse.jst.jee.server:TodoList::jst.web::6.0"/>
+  </server>
+  <server auto-publish-setting="2" auto-publish-time="1" configuration-id="/Servers/MYS-Agency-server-config" deployDir="wtpwebapps" hostname="localhost" id="MYS-Agency-server" name="MYS-Agency-server" runtime-id="Apache Tomcat v10.1" server-type="org.eclipse.jst.server.tomcat.101" server-type-id="org.eclipse.jst.server.tomcat.101" start-timeout="60" stop-timeout="15" testEnvironment="true" timestamp="3">
+>>>>>>> 538009fbe59f4da34abb8a6792c60533c9c8f845
     <list key="modules" value0="MYSAgentProgram::org.eclipse.jst.jee.server:MYSAgentProgram::jst.web::6.0"/>
   </server>
 </servers>

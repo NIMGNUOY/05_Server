@@ -8,8 +8,8 @@
 	
 	<entry key = "url">jdbc:oracle:thin:@localhost:1521:XE</entry>
 	
-	<entry key = "user">todo_servlet</entry>
+	<entry key = "user">project_sym</entry>
 	
-	<entry key = "password">todo_servlet</entry>
+	<entry key = "password">project_sym</entry>
 
 </properties>

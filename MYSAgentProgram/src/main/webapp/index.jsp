@@ -16,6 +16,8 @@
 	<main>
 		<h1>MYS AGENCY</h1>
 		
+		<br><br><br>
+
 		<a href="/player">For Player</a>
 		<br>
 		<a href="/agent">For Agent</a>

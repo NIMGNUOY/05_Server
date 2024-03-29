@@ -1,0 +1,158 @@
+main {
+    width: 1000px;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginContainer {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.loginTitle {
+
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #27187e;
+    padding: 0 10px;
+    color: #27187e;
+
+}
+
+.loginImg {
+    position: relative;
+}
+
+.loginForm {
+    position: absolute;
+}
+
+.btnArea {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.inputBox {
+
+    font-size: 15px;
+
+}
+
+.loginBtn {
+    font-size: 18px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.loginBtn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.signBtn {
+    font-size: 18px;
+    text-decoration-line: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+.signBtn:hover {
+    background-color: gray;
+    color: white;
+}
+
+.listTable {
+    font-weight: bold;
+}
+
+.listTable td {
+    padding: 5px 7px;
+    font-size: 20px;
+    color: black;
+}
+
+.listTable a {
+    text-decoration-line: none ;
+    text-decoration: none;
+}
+
+
+
+.listTable a:link {
+    color: black;
+}
+
+.listTable a:visited {
+    color: black;
+}
+
+.listTable a:hover {
+
+    background-color: gray;
+    color: white;
+    padding: 0 5px;
+    border-radius: 5px;
+}
+
+.agentBtn a {
+
+    text-decoration-line: none;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px;
+}
+
+.agentBtn a:link {
+    color: gray;
+}
+
+.agentBtn a:visited {
+    color: gray;
+}
+
+.agentBtn a:hover {
+    background-color: gray;
+    color: white;
+    border-radius: 5px;
+}
+
+.ling {
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.title {
+
+    font-size: 35px;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #27187e;
+    padding: 0 10px;
+    color: #27187e;
+
+}

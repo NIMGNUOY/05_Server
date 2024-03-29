@@ -109,6 +109,45 @@ public class AgentService {
 		return result;
 	}
 
+
+	/** 선수 한명 조회 서비스
+	 * @param playerNo
+	 * @return player
+	 */
+	public Player selectOne(String playerNo) throws Exception {
+		
+		Connection conn = getConnection();
+		
+		Player player = dao.selectOne(conn, playerNo);
+		
+		close(conn);
+		
+		return player;
+	}
+
+
+	/** 선수 정보 수정 서비스
+	 * @param inputTeam
+	 * @param inputBackNum
+	 * @param memo
+	 * @param medicalCheck
+	 * @param playerNo
+	 * @return result
+	 */
+	public int update(String inputTeam, int inputBackNum, String memo, String medicalCheck, String playerNo) throws Exception {
+		
+		Connection conn = getConnection();
+		
+		int result = dao.update(conn, inputTeam, inputBackNum, memo, medicalCheck, playerNo);
+		
+		if(result > 0) commit(conn);
+		else			rollback(conn);
+		
+		close(conn);
+		
+		return result;
+	}
+
 }
 
 

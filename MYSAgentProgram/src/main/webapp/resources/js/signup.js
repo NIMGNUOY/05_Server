@@ -3,7 +3,9 @@ const checkObj = {
     "inputPw" : false,          // 비밀번호
     "inputPwConfirm" : false,  // 비번확인
     "inputName" : false,         // 닉네임
-    "inputEmail" : false         // 이메일
+    "inputEmail" : false,         // 이메일
+    "inputPhone" : false,          // 연락처
+    "inputNationality" : false      // 국적
 };
 
 
@@ -123,6 +125,41 @@ inputEmail.addEventListener("keyup", function() {
     }
 
 });
+
+
+// 연락처 유효성
+const inputPhone = document.getElementById("inputPhone");
+
+inputPhone.addEventListener("keyup", function() {
+
+    const regExp = /^(01[016789]{1})[0-9]{3,4}[0-9]{4}$/;
+    const phoneMessage = document.getElementById("phoneMessage");
+
+    if(regExp.test(this.value)) {
+        phoneMessage.innerText = "정상입력";
+        phoneMessage.color = "green";
+        checkObj.inputPhone = true;
+    } else {
+        phoneMessage.innerText = "연락처를 확인해주세요";
+        phoneMessage.color = "red";
+        checkObj.inputPhone = false;
+    }
+
+})
+
+// 국적
+const inputNationality = document.getElementById("inputNationality");
+
+inputNationality.addEventListener("change", function () {
+
+    if(this.value.length == 0) {
+        alert("국적을 입력해주세요");
+        this.focus();
+    } else {
+        checkObj.inputNationality = true;
+    }
+
+})
 
 
 

@@ -13,7 +13,7 @@ const inputName = document.getElementById("inputName");
 
 inputName.addEventListener("keyup", function () {
     
-    const regExp = /^[A-Za-z\s]{2,20}$/;
+    const regExp = /^[A-Za-z\s]{2,30}$/;
     const nameMessage = document.getElementById("nameMessage");
     
     if(regExp.test(this.value)) {
@@ -24,7 +24,7 @@ inputName.addEventListener("keyup", function () {
 
     } else {
 
-        nameMessage.innerText = "2~20글자 대/소문자 영어를 입력해주세요";
+        nameMessage.innerText = "2~30글자 대/소문자 영어를 입력해주세요";
         nameMessage.style.color = "red";
         checkObj.inputName = false;
 

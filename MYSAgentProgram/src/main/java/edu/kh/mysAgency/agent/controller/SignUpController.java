@@ -31,6 +31,8 @@ public class SignUpController extends HttpServlet {
 			String inputPw = req.getParameter("inputPw");
 			String inputName = req.getParameter("inputName");
 			String inputEmail = req.getParameter("inputEmail");
+			String inputPhone = req.getParameter("inputPhone");
+			String inputNationality = req.getParameter("inputNationality");
 			
 			Agent agent = new Agent();
 			
@@ -38,6 +40,8 @@ public class SignUpController extends HttpServlet {
 			agent.setAgentPw(inputPw);
 			agent.setAgentName(inputName);
 			agent.setEmail(inputEmail);
+			agent.setPhone(inputPhone);
+			agent.setAgentNationality(inputNationality);
 			
 			AgentService service = new AgentService();
 			

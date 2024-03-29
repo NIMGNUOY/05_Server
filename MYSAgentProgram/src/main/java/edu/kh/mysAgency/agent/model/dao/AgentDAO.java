@@ -68,6 +68,7 @@ public class AgentDAO {
 				agent.setAgentNo( rs.getInt("AGENT_NO") );
 				agent.setAgentName( rs.getString("AGENT_NAME") );
 				agent.setEmail( rs.getString("AGENT_EMAIL") );
+				agent.setPhone( rs.getString("AGENT_PHONE") );
 				agent.setAgentNationality( rs.getString("AGENT_NATIONALITY") );
 				agent.setAgentId( rs.getString("AGENT_ID") );
 				
@@ -106,6 +107,7 @@ public class AgentDAO {
 				
 				Player player = new Player();
 				
+				int playerNo = rs.getInt("PLAYER_NO");
 				String playerName = rs.getString("PLAYER_NAME");
 				int playerAge = rs.getInt("PLAYER_AGE");
 				String playerTeam = rs.getString("PLAYER_TEAM");
@@ -115,6 +117,7 @@ public class AgentDAO {
 				String medicalCheck = rs.getString("MEDICAL_CHECK");
 				int agentNum = rs.getInt("AGENT_NO");
 				
+				player.setPlayerNo(playerNo);
 				player.setPlayerName(playerName);
 				player.setPlayerAge(playerAge);
 				player.setPlayerTeam(playerTeam);
@@ -155,8 +158,10 @@ public class AgentDAO {
 			
 			pstmt.setString(1, agent.getAgentName());
 			pstmt.setString(2, agent.getEmail());
-			pstmt.setString(3, agent.getAgentId());
-			pstmt.setString(4, agent.getAgentPw());
+			pstmt.setString(3, agent.getPhone());
+			pstmt.setString(4, agent.getAgentNationality());
+			pstmt.setString(5, agent.getAgentId());
+			pstmt.setString(6, agent.getAgentPw());
 			
 			result = pstmt.executeUpdate();
 			
@@ -229,6 +234,87 @@ public class AgentDAO {
 			close(pstmt);
 		}
 		
+		
+		return result;
+	}
+
+
+	/** 선수 한명 조회 SQL 수행 DAO
+	 * @param conn
+	 * @param playerNo
+	 * @return player
+	 */
+	public Player selectOne(Connection conn, String playerNo) throws Exception {
+		
+		Player player = null;
+		
+		try {
+			
+			String sql = prop.getProperty("selectOne");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, playerNo);
+			
+			rs = pstmt.executeQuery();
+			
+			if( rs.next() ) {
+				
+				player = new Player();
+				
+				player.setPlayerNo( rs.getInt("PLAYER_NO") );
+				player.setPlayerName( rs.getString("PLAYER_NAME") );
+				player.setPlayerAge( rs.getInt("PLAYER_AGE") );
+				player.setPlayerTeam( rs.getString("PLAYER_TEAM") );
+				player.setPlayerBackNum( rs.getInt("PLAYER_BACKNUM") );
+				player.setPlayerNationality( rs.getString("PLAYER_NATIONALITY") );
+				player.setPlayerMemo( rs.getString("PLAYER_MEMO") );
+				player.setMedicalCheck( rs.getString("MEDICAL_CHECK") );
+				player.setAgentNo( rs.getInt("AGENT_NO") );
+				
+			}
+			
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		
+		
+		return player;
+	}
+
+
+	/** 선수 정보 수정 SQL 수행 DAO
+	 * @param conn
+	 * @param inputTeam
+	 * @param inputBackNum
+	 * @param memo
+	 * @param medicalCheck
+	 * @param playerNo
+	 * @return result
+	 */
+	public int update(Connection conn, String inputTeam, int inputBackNum, String memo, String medicalCheck,
+			String playerNo) throws Exception {
+		
+		int result = 0;
+		
+		try {
+			
+			String sql = prop.getProperty("update");
+			
+			pstmt = conn.prepareStatement(sql);
+			
+			pstmt.setString(1, inputTeam);
+			pstmt.setInt(2, inputBackNum);
+			pstmt.setString(3, memo);
+			pstmt.setString(4, medicalCheck);
+			pstmt.setString(5, playerNo);
+			
+			result = pstmt.executeUpdate();
+			
+		} finally {
+			close(pstmt);
+		}
 		
 		return result;
 	}

@@ -30,8 +30,15 @@
 			
 			<p>E-mail</p>
 			<input type="email" name="inputEmail" id="inputEmail" required>
+			
+			<p>PHONE</p>
+			<input type="text" name="inputPhone" id="inputPhone" required>
+			<span id="phoneMessage"></span>
+			
+			<p>국적</p>
+			<input type="text" name="inputNationality" id="inputNationality" required>
 
-			<br>
+			<br><br>
 			
 			<button>가입하기</button>
 		</form>

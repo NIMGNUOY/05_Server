@@ -23,6 +23,8 @@ public class DeleteController extends HttpServlet {
 			
 			String playerNo = req.getParameter("playerNo");
 
+			System.out.println(playerNo);
+			
 			AgentService service = new AgentService();
 			
 			int result = service.delete(playerNo);

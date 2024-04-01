@@ -1,7 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <publish-info>
-  <server id="MYS-Agency-server" path="publish3.dat"/>
-  <server id="JSP2 server" path="publish1.dat"/>
-  <server id="Servlet Server" path="publish0.dat"/>
-  <server id="todoList-server" path="publish2.dat"/>
+  <server id="MyServer" path="publish0.dat"/>
 </publish-info>
